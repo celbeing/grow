@@ -1,54 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\",
+  "WorkspaceRootPath": "C:\\Users\\kimsd\\Documents\\grow\\django\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\students_app\\templates\\students_app\\student_list.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|solutionrelative:grow_project\\students_app\\templates\\students_app\\student_list.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\students_app\\templates\\students_app\\student_avatar.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|solutionrelative:grow_project\\students_app\\templates\\students_app\\student_avatar.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\students_app\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|solutionrelative:grow_project\\students_app\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\students_app\\templates\\students_app\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|solutionrelative:grow_project\\students_app\\templates\\students_app\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\grow_project\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|solutionrelative:grow_project\\grow_project\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\students_app\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|solutionrelative:grow_project\\students_app\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\students_app\\apps.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|solutionrelative:grow_project\\students_app\\apps.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\students_app\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|solutionrelative:grow_project\\students_app\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\manage.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|solutionrelative:grow_project\\manage.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\grow_project\\settings.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|solutionrelative:grow_project\\grow_project\\settings.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\grow_project\\__init__.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|solutionrelative:grow_project\\grow_project\\__init__.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\students_app\\__init__.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|solutionrelative:grow_project\\students_app\\__init__.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\migrations\\__init__.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|solutionrelative:grow_project\\students_app\\migrations\\__init__.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,158 +22,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "student_avatar.html",
-              "DocumentMoniker": "C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\students_app\\templates\\students_app\\student_avatar.html",
-              "RelativeDocumentMoniker": "grow_project\\students_app\\templates\\students_app\\student_avatar.html",
-              "ToolTip": "C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\students_app\\templates\\students_app\\student_avatar.html",
-              "RelativeToolTip": "grow_project\\students_app\\templates\\students_app\\student_avatar.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-25T06:16:08.159Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "student_list.html",
-              "DocumentMoniker": "C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\students_app\\templates\\students_app\\student_list.html",
-              "RelativeDocumentMoniker": "grow_project\\students_app\\templates\\students_app\\student_list.html",
-              "ToolTip": "C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\students_app\\templates\\students_app\\student_list.html",
-              "RelativeToolTip": "grow_project\\students_app\\templates\\students_app\\student_list.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-25T06:15:35.358Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "models.py",
-              "DocumentMoniker": "C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\students_app\\models.py",
-              "RelativeDocumentMoniker": "grow_project\\students_app\\models.py",
-              "ToolTip": "C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\students_app\\models.py",
-              "RelativeToolTip": "grow_project\\students_app\\models.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Title": "__init__.py (students_app.migrations)",
+              "DocumentMoniker": "C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\migrations\\__init__.py",
+              "RelativeDocumentMoniker": "grow_project\\students_app\\migrations\\__init__.py",
+              "ToolTip": "C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\migrations\\__init__.py",
+              "RelativeToolTip": "grow_project\\students_app\\migrations\\__init__.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-05-25T06:05:38.136Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "urls.py",
-              "DocumentMoniker": "C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\grow_project\\urls.py",
-              "RelativeDocumentMoniker": "grow_project\\grow_project\\urls.py",
-              "ToolTip": "C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\grow_project\\urls.py",
-              "RelativeToolTip": "grow_project\\grow_project\\urls.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-05-25T06:16:39.243Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "urls.py",
-              "DocumentMoniker": "C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\students_app\\urls.py",
-              "RelativeDocumentMoniker": "grow_project\\students_app\\urls.py",
-              "ToolTip": "C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\students_app\\urls.py",
-              "RelativeToolTip": "grow_project\\students_app\\urls.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-05-25T06:17:16.142Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "views.py",
-              "DocumentMoniker": "C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\students_app\\views.py",
-              "RelativeDocumentMoniker": "grow_project\\students_app\\views.py",
-              "ToolTip": "C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\students_app\\views.py",
-              "RelativeToolTip": "grow_project\\students_app\\views.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-05-25T06:06:11.087Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\students_app\\templates\\students_app\\index.html",
-              "RelativeDocumentMoniker": "grow_project\\students_app\\templates\\students_app\\index.html",
-              "ToolTip": "C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\students_app\\templates\\students_app\\index.html",
-              "RelativeToolTip": "grow_project\\students_app\\templates\\students_app\\index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-25T06:06:26.224Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "apps.py",
-              "DocumentMoniker": "C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\students_app\\apps.py",
-              "RelativeDocumentMoniker": "grow_project\\students_app\\apps.py",
-              "ToolTip": "C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\students_app\\apps.py",
-              "RelativeToolTip": "grow_project\\students_app\\apps.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-05-25T06:36:31.931Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "settings.py",
-              "DocumentMoniker": "C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\grow_project\\settings.py",
-              "RelativeDocumentMoniker": "grow_project\\grow_project\\settings.py",
-              "ToolTip": "C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\grow_project\\settings.py",
-              "RelativeToolTip": "grow_project\\grow_project\\settings.py",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACoAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-05-25T05:51:45.109Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "manage.py",
-              "DocumentMoniker": "C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\manage.py",
-              "RelativeDocumentMoniker": "grow_project\\manage.py",
-              "ToolTip": "C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\manage.py",
-              "RelativeToolTip": "grow_project\\manage.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-05-25T06:30:51.399Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "__init__.py (grow_project)",
-              "DocumentMoniker": "C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\grow_project\\__init__.py",
-              "RelativeDocumentMoniker": "grow_project\\grow_project\\__init__.py",
-              "ToolTip": "C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\grow_project\\__init__.py",
-              "RelativeToolTip": "grow_project\\grow_project\\__init__.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-05-25T06:26:48.045Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "__init__.py (students_app)",
-              "DocumentMoniker": "C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\students_app\\__init__.py",
-              "RelativeDocumentMoniker": "grow_project\\students_app\\__init__.py",
-              "ToolTip": "C:\\Users\\kimsd\\OneDrive\\\uBB38\uC11C\\GitHub\\grow\\django\\grow_project\\students_app\\__init__.py",
-              "RelativeToolTip": "grow_project\\students_app\\__init__.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-05-25T06:04:52.968Z",
+              "WhenOpened": "2025-05-25T07:40:34.861Z",
               "EditorCaption": ""
             }
           ]
