@@ -1,0 +1,9 @@
+﻿<h1>학생 목록</h1>
+<ul>
+    {% for student in students %}
+    <li>
+        {{ student.name }} ({{ student.grade }}학년)
+        - <a href="{% url 'student_avatar' student.id %}">아바타 보기</a>
+    </li>
+    {% endfor %}
+</ul>
