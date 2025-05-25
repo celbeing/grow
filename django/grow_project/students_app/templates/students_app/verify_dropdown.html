@@ -1,0 +1,22 @@
+﻿<h2>아바타 보기</h2>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <label for="student_id">이름 선택:</label><br>
+    <select name="student_id" required>
+        <option value="">-- 학생 선택 --</option>
+        {% for student in students %}
+        <option value="{{ student.id }}">{{ student.name }}</option>
+        {% endfor %}
+    </select><br><br>
+
+    <label for="code">코드 입력:</label><br>
+    <input type="password" name="code" required><br><br>
+
+    <button type="submit">아바타 보기</button>
+
+    {% if error %}
+    <p style="color:red;">{{ error }}</p>
+    {% endif %}
+</form>

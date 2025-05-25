@@ -45,10 +45,12 @@
     <Compile Include="students_app\__init__.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="grow_project\students.csv" />
     <Content Include="requirements.txt" />
     <Content Include="students_app\templates\students_app\index.html" />
     <Content Include="students_app\templates\students_app\student_avatar.html" />
     <Content Include="students_app\templates\students_app\student_list.html" />
+    <Content Include="students_app\templates\students_app\verify_dropdown.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="grow_project\" />
