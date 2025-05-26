@@ -7,7 +7,7 @@
     <select name="student_id" required>
         <option value="">-- 학생 선택 --</option>
         {% for student in students %}
-        <option value="{{ student.id }}">{{ student.name }}</option>
+        <option value="{{ student.name }}">{{ student.name }}</option>
         {% endfor %}
     </select><br><br>
 

@@ -1,30 +1,54 @@
-﻿from django.shortcuts import render,  redirect, get_object_or_404
-from .models import Student
+﻿from django.shortcuts import render, redirect
+from .utils import load_students_from_csv, render_avatar_text, validate_student_code_by_name
 
-def verify_with_dropdown(request):
-    error = None
-    students = Student.objects.all()
+def avatar_view(request):
+    df = load_students_from_csv()
+    names = df['name'].tolist()
+    avatar_output = ""
+    selected_name = ""
+    error = ""
 
     if request.method == 'POST':
-        student_id = request.POST.get('student_id')
-        input_code = request.POST.get('code')
+        selected_name = request.POST.get('student_name')
+        code_input = request.POST.get('code')
 
-        student = get_object_or_404(Student, id=student_id)
+        student_data, error = validate_student_code_by_name(df, selected_name, code_input)
 
-        if input_code == student.code:
-            return redirect('student_avatar', student_id=student.id)
-        else:
-            error = "코드가 일치하지 않습니다."
+        if not error:
+            avatar_output = render_avatar_text("all", student_data)
 
-    return render(request, 'students_app/verify_dropdown.html', {
-        'students': students,
+    return render(request, 'students_app/avatar_form.html', {
+        'student_names': names,
+        'selected_name': selected_name,
+        'avatar_output': avatar_output,
         'error': error
     })
 
-def student_list(request):
-    students = Student.objects.all()
-    return render(request, 'students_app/student_list.html', {'students': students})
 
-def student_avatar(request, student_id):
-    student = get_object_or_404(Student, id=student_id)
-    return render(request, 'students_app/student_avatar.html', {'student': student})
+def verify_with_dropdown(request):
+    df = load_students_from_csv()
+    names = df['name'].tolist()
+    selected_name = ""
+    result = ""
+    error = ""
+
+    if request.method == 'POST':
+        selected_name = request.POST.get('student_name')
+        code_input = request.POST.get('code')
+
+        student_data, error = validate_student_code_by_name(df, selected_name, code_input)
+
+        if not error:
+            result = "인증 성공! (예: 아바타 페이지 이동)"
+
+    return render(request, 'students_app/verify_dropdown.html', {
+        'student_names': names,
+        'selected_name': selected_name,
+        'result': result,
+        'error': error
+    })
+
+
+def student_list(request):
+    df = load_students_from_csv()
+    return render(request, 'students_app/student_list.html', {'students': df.to_dict(orient='records')})

@@ -41,12 +41,14 @@
     <Compile Include="students_app\models.py" />
     <Compile Include="students_app\tests.py" />
     <Compile Include="students_app\urls.py" />
+    <Compile Include="students_app\utils.py" />
     <Compile Include="students_app\views.py" />
     <Compile Include="students_app\__init__.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="grow_project\students.csv" />
+    <Content Include="students.csv" />
     <Content Include="requirements.txt" />
+    <Content Include="students_app\templates\students_app\avatar_form.html" />
     <Content Include="students_app\templates\students_app\index.html" />
     <Content Include="students_app\templates\students_app\student_avatar.html" />
     <Content Include="students_app\templates\students_app\student_list.html" />
