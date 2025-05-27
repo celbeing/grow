@@ -1,27 +1,98 @@
-﻿<h1>아바타 보기</h1>
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>나의 키우기</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #fdf1e6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-<form method="POST">
-    {% csrf_token %}
-    <label>이름 선택:</label>
-    <select name="student_name" required>
-        <option value="">-- 학생 선택 --</option>
-        {% for name in student_names %}
-        <option value="{{ name }}" {% if name == selected_name %}selected{% endif %}>{{ name }}</option>
-        {% endfor %}
-    </select><br><br>
+        .container {
+            text-align: center;
+            background-color: #fdf1e6;
+            padding: 40px;
+            border-radius: 12px;
+        }
 
-    <label>코드 입력:</label><br>
-    <input type="text" name="code" required><br><br>
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
 
-    <button type="submit">아바타 보기</button>
-</form>
+        form {
+            display: inline-block;
+            text-align: left;
+        }
 
-{% if error %}
-<p style="color: red;">{{ error }}</p>
-{% endif %}
+        label {
+            display: block;
+            margin-top: 12px;
+            margin-bottom: 6px;
+            font-size: 18px;
+        }
 
-{% if avatar_output %}
-<pre style="background:#f3f3f3; padding:10px; border:1px solid #ccc;">
-{{ avatar_output }}
-  </pre>
-{% endif %}
+        select, input[type="text"] {
+            width: 200px;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: white;
+            border: 1px solid #333;
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #eee;
+            }
+
+        .error {
+            color: red;
+            margin-top: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>나의 키우기</h1>
+
+        <form method="POST">
+            {% csrf_token %}
+            <label for="student_name">이름</label>
+            <select name="student_name" required>
+                <option value="">--선택--</option>
+                {% for name in student_names %}
+                <option value="{{ name }}" {% if name == selected_name %}selected{% endif %}>{{ name }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="code">코드</label>
+            <input type="text" name="code" required>
+
+            <button type="submit">확인</button>
+        </form>
+
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>

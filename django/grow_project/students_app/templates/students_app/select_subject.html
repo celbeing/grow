@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>나의 키우기 - 과목 선택</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #fdf1e6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .subject-grid {
+            display: flex;
+            gap: 40px;
+        }
+
+        .subject-card {
+            width: 120px;
+            height: 160px;
+            border-radius: 12px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+            transition: transform 0.2s ease;
+        }
+
+            .subject-card:hover {
+                transform: scale(1.05);
+            }
+
+        .math {
+            background-color: #F9B74E;
+        }
+
+        .social {
+            background-color: #1ABC5B;
+        }
+
+        .science {
+            background-color: #4AB3F4;
+        }
+
+        .subject-subtitle {
+            font-size: 14px;
+            font-weight: normal;
+            margin-top: 6px;
+        }
+    </style>
+</head>
+<body>
+    <h1>나의 키우기</h1>
+
+    <div class="subject-grid">
+        <a href="{% url 'show_avatar' student_id=student_id subject='math' %}" class="subject-card math">
+            수학
+            <div class="subject-subtitle">제빵사</div>
+        </a>
+        <a href="{% url 'show_avatar' student_id=student_id subject='social' %}" class="subject-card social">
+            사회
+            <div class="subject-subtitle">민주시민</div>
+        </a>
+        <a href="{% url 'show_avatar' student_id=student_id subject='science' %}" class="subject-card science">
+            과학
+            <div class="subject-subtitle">명탐정</div>
+        </a>
+    </div>
+</body>
+</html>

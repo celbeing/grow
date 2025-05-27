@@ -50,9 +50,10 @@
     <Content Include="requirements.txt" />
     <Content Include="students_app\templates\students_app\avatar_form.html" />
     <Content Include="students_app\templates\students_app\index.html" />
+    <Content Include="students_app\templates\students_app\select_subject.html" />
+    <Content Include="students_app\templates\students_app\show_avatar.html" />
     <Content Include="students_app\templates\students_app\student_avatar.html" />
     <Content Include="students_app\templates\students_app\student_list.html" />
-    <Content Include="students_app\templates\students_app\verify_dropdown.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="grow_project\" />
