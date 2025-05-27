@@ -7,11 +7,34 @@ def select_subject(request, student_id):
         'student_id': student_id
     })
 
-def show_avatar(request, subject):
+def show_avatar(request, student_id, subject):
     # 선택된 과목을 기반으로 아바타 출력
     # 이 부분은 나중에 이미지로 대체할 예정
-    return render(request, 'students_app/avatar.html', {
-        'subject': subject
+    df = load_students_from_csv()
+    row = df[df['id'] == student_id]
+
+    if row.empty:
+        return HttpResponse("학생 정보를 찾을 수 없습니다.", status = 404)
+
+    student_data = row.iloc[0].to_dict()
+
+    # render_avatar_text는 전과목 처리 가능하지만 과목별 처리도 지원하도록 수정 가능
+    avatar_output = render_avatar_text(subject, student_data)
+
+    template_map = {
+        "math": "students_app/math.html",
+        "social": "students_app/social.html",
+        "science": "students_app/science.html",
+    }
+
+    template = template_map.get(subject)
+    if not template:
+        return HttpResponse("유효하지 않은 과목입니다.", status = 400)
+
+
+    return render(request, template, {
+        'student': student_data,
+        'avatar_output': avatar_output
     })
 
 

@@ -50,8 +50,11 @@
     <Content Include="requirements.txt" />
     <Content Include="students_app\templates\students_app\avatar_form.html" />
     <Content Include="students_app\templates\students_app\index.html" />
+    <Content Include="students_app\templates\students_app\math.html" />
+    <Content Include="students_app\templates\students_app\science.html" />
     <Content Include="students_app\templates\students_app\select_subject.html" />
     <Content Include="students_app\templates\students_app\show_avatar.html" />
+    <Content Include="students_app\templates\students_app\social.html" />
     <Content Include="students_app\templates\students_app\student_avatar.html" />
     <Content Include="students_app\templates\students_app\student_list.html" />
   </ItemGroup>

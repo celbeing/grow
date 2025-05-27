@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ student.name }}의 수학 아바타</title>
+    <style>
+        body {
+            background-color: #F9B74E;
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            text-align: center;
+            color: #111;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        pre {
+            background-color: #fff9e6;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: left;
+            font-size: 16px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ student.name }}의 수학 아바타</h1>
+    <pre>{{ avatar_output }}</pre>
+</body>
+</html>
