@@ -17,6 +17,25 @@ def validate_student_code_by_name(df, name: str, code: str):
         return None, "코드가 일치하지 않습니다."
     return student.to_dict(), None
 
+# 과학 아바타 이미지
+def get_science_avatar_image(student_data):
+    score_keys = [
+        "science_lifelong", "science_communication", "science_problem_solving",
+        "science_inquiry", "science_logical"
+    ]
+    total = sum([int(student_data.get(key, 0)) for key in score_keys])
+
+    if total <= 30:
+        level = "lv1"
+    elif total <= 60:
+        level = "lv2"
+    elif total <= 80:
+        level = "lv3"
+    else:
+        level = "lvmax"
+
+    return f"students_app/images/science_{level}.png"
+
 # 아바타 텍스트 생성 함수
 # 나중에 다 이미지 파일로 고쳐서 html+css+js로 렌더링할 예정
 def render_avatar_text(subject: str, scores: dict):

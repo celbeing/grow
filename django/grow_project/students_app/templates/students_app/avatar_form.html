@@ -5,14 +5,12 @@
     <title>나의 키우기</title>
     <style>
         body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
             background-color: #fdf1e6;
+            font-family: Arial, sans-serif;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
         }
 
         .container {
@@ -25,32 +23,31 @@
         h1 {
             font-size: 36px;
             font-weight: bold;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
 
-        form {
-            display: inline-block;
-            text-align: left;
+        .form-group {
+            margin-bottom: 16px;
         }
 
         label {
             display: block;
-            margin-top: 12px;
-            margin-bottom: 6px;
             font-size: 18px;
+            margin-bottom: 6px;
         }
 
         select, input[type="text"] {
-            width: 200px;
-            padding: 8px;
+            width: 240px;
+            padding: 10px;
             font-size: 16px;
             border: 1px solid #aaa;
-            border-radius: 4px;
+            border-radius: 6px;
+            box-sizing: border-box;
         }
 
         button {
             margin-top: 20px;
-            width: 100%;
+            width: 240px;
             padding: 10px;
             font-size: 16px;
             background-color: white;
@@ -60,13 +57,10 @@
             cursor: pointer;
         }
 
-            button:hover {
-                background-color: #eee;
-            }
-
-        .error {
+        .error-message {
             color: red;
-            margin-top: 12px;
+            font-size: 16px;
+            margin-bottom: 16px;
         }
     </style>
 </head>
@@ -74,25 +68,104 @@
     <div class="container">
         <h1>나의 키우기</h1>
 
+        {% if error %}
+        <div class="error-message">{{ error }}</div>
+        {% endif %}
+
         <form method="POST">
             {% csrf_token %}
-            <label for="student_name">이름</label>
-            <select name="student_name" required>
-                <option value="">--선택--</option>
-                {% for name in student_names %}
-                <option value="{{ name }}" {% if name == selected_name %}selected{% endif %}>{{ name }}</option>
-                {% endfor %}
-            </select>
 
-            <label for="code">코드</label>
-            <input type="text" name="code" required>
+            <div class="form-group">
+                <label for="region">지역</label>
+                <select id="region" name="region">
+                    <option value="">-- 지역 선택 --</option>
+                    {% for region in regions %}
+                    <option value="{{ region }}">{{ region }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="city">도시</label>
+                <select id="city" name="city">
+                    <option value="">-- 도시 선택 --</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="school">학교</label>
+                <select id="school" name="school">
+                    <option value="">-- 학교 선택 --</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="grade">학년</label>
+                <select id="grade" name="grade">
+                    <option value="">-- 학년 선택 --</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="code">코드</label>
+                <input type="text" name="code" id="code" required>
+            </div>
 
             <button type="submit">확인</button>
         </form>
-
-        {% if error %}
-        <div class="error">{{ error }}</div>
-        {% endif %}
     </div>
+
+    <script>
+        document.getElementById("region").addEventListener("change", function () {
+            fetch(`/ajax/get_cities/?region=${this.value}`)
+                .then(res => res.json())
+                .then(data => {
+                    const citySelect = document.getElementById("city");
+                    citySelect.innerHTML = '<option value="">-- 도시 선택 --</option>';
+                    data.cities.forEach(city => {
+                        citySelect.innerHTML += `<option value="${city}">${city}</option>`;
+                    });
+
+                    // 하위 항목 초기화
+                    document.getElementById("school").innerHTML = '<option value="">-- 학교 선택 --</option>';
+                    document.getElementById("grade").innerHTML = '<option value="">-- 학년 선택 --</option>';
+                    document.getElementById("code").value = '';
+                });
+        });
+
+        document.getElementById("city").addEventListener("change", function () {
+            const region = document.getElementById("region").value;
+            fetch(`/ajax/get_schools/?region=${region}&city=${this.value}`)
+                .then(res => res.json())
+                .then(data => {
+                    const schoolSelect = document.getElementById("school");
+                    schoolSelect.innerHTML = '<option value="">-- 학교 선택 --</option>';
+                    data.schools.forEach(school => {
+                        schoolSelect.innerHTML += `<option value="${school}">${school}</option>`;
+                    });
+
+                    document.getElementById("grade").innerHTML = '<option value="">-- 학년 선택 --</option>';
+                    document.getElementById("code").value = '';
+                });
+        });
+
+        document.getElementById("school").addEventListener("change", function () {
+            fetch(`/ajax/get_grades/?school=${this.value}`)
+                .then(res => res.json())
+                .then(data => {
+                    const gradeSelect = document.getElementById("grade");
+                    gradeSelect.innerHTML = '<option value="">-- 학년 선택 --</option>';
+                    data.grade.forEach(grade => {
+                        gradeSelect.innerHTML += `<option value="${grade}">${grade}</option>`;
+                    });
+
+                    document.getElementById("code").value = '';
+                });
+        });
+
+        document.getElementById("grade").addEventListener("change", function () {
+            document.getElementById("code").value = '';
+        });
+    </script>
 </body>
 </html>

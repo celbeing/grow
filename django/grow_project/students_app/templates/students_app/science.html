@@ -1,11 +1,12 @@
-﻿<!DOCTYPE html>
+﻿{% load static %}
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <title>{{ student.name }}의 과학 아바타</title>
     <style>
         body {
-            background-color: #fdf1e6;
+            background-color: #e5f4fd;
             font-family: Arial, sans-serif;
             padding: 40px;
             text-align: center;
@@ -17,7 +18,7 @@
         }
 
         pre {
-            background-color: #fffaf0;
+            background-color: #c2e8fc;
             padding: 20px;
             border-radius: 10px;
             display: inline-block;
@@ -29,6 +30,8 @@
 </head>
 <body>
     <h1>{{ student.name }}의 과학 아바타</h1>
+    <img src="{% static avatar_path %}" alt="Science Avatar" style="max-width: 300px; margin-top: 20px;">
+    <br><br/>
     <pre>{{ avatar_output }}</pre>
 </body>
 </html>
