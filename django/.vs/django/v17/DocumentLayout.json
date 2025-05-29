@@ -50,8 +50,7 @@
               "RelativeToolTip": "grow_project\\students_app\\templatetags\\custom_filters.py",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-05-29T08:54:12.785Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-29T08:54:12.785Z"
             },
             {
               "$type": "Document",
@@ -61,7 +60,7 @@
               "RelativeDocumentMoniker": "grow_project\\students_app\\templates\\students_app\\math.html",
               "ToolTip": "C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\templates\\students_app\\math.html",
               "RelativeToolTip": "grow_project\\students_app\\templates\\students_app\\math.html",
-              "ViewState": "AgIAAIgAAAAAAAAAAAAmwJUAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAmwKMAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-05-29T08:10:40.34Z",
               "EditorCaption": ""
@@ -76,8 +75,7 @@
               "RelativeToolTip": "grow_project\\students_app\\views.py",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-05-25T07:53:47.657Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-25T07:53:47.657Z"
             },
             {
               "$type": "Document",
@@ -89,8 +87,7 @@
               "RelativeToolTip": "grow_project\\students_app\\utils.py",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-05-27T11:07:42.91Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T11:07:42.91Z"
             },
             {
               "$type": "Document",
@@ -102,8 +99,7 @@
               "RelativeToolTip": "grow_project\\students_app\\templates\\students_app\\avatar_form.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAKIAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-27T14:50:17.934Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T14:50:17.934Z"
             },
             {
               "$type": "Document",
@@ -115,8 +111,7 @@
               "RelativeToolTip": "grow_project\\students_app\\urls.py",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-05-27T07:57:25.651Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T07:57:25.651Z"
             }
           ]
         }
