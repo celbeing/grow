@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\kimsd\\Documents\\grow\\django\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\templates\\students_app\\science.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|solutionrelative:grow_project\\students_app\\templates\\students_app\\science.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|solutionrelative:grow_project\\students_app\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\utils.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|solutionrelative:grow_project\\students_app\\utils.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\templates\\students_app\\select_subject.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|solutionrelative:grow_project\\students_app\\templates\\students_app\\select_subject.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\templates\\students_app\\avatar_form.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -23,12 +19,8 @@
       "RelativeMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|solutionrelative:grow_project\\students_app\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|solutionrelative:grow_project\\students.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\templates\\students_app\\select_subject.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|solutionrelative:grow_project\\students_app\\templates\\students_app\\select_subject.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\utils.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E842B1F8-B582-49F0-8311-CE325E7BC539}|grow_project\\grow_project.pyproj|solutionrelative:grow_project\\students_app\\utils.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,93 +38,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "science.html",
-              "DocumentMoniker": "C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\templates\\students_app\\science.html",
-              "RelativeDocumentMoniker": "grow_project\\students_app\\templates\\students_app\\science.html",
-              "ToolTip": "C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\templates\\students_app\\science.html",
-              "RelativeToolTip": "grow_project\\students_app\\templates\\students_app\\science.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-28T09:19:35.799Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "avatar_form.html",
-              "DocumentMoniker": "C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\templates\\students_app\\avatar_form.html",
-              "RelativeDocumentMoniker": "grow_project\\students_app\\templates\\students_app\\avatar_form.html",
-              "ToolTip": "C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\templates\\students_app\\avatar_form.html",
-              "RelativeToolTip": "grow_project\\students_app\\templates\\students_app\\avatar_form.html",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAAAJoAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-27T14:50:17.934Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "urls.py",
-              "DocumentMoniker": "C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\urls.py",
-              "RelativeDocumentMoniker": "grow_project\\students_app\\urls.py",
-              "ToolTip": "C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\urls.py",
-              "RelativeToolTip": "grow_project\\students_app\\urls.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-05-27T07:57:25.651Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "views.py",
-              "DocumentMoniker": "C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\views.py",
-              "RelativeDocumentMoniker": "grow_project\\students_app\\views.py",
-              "ToolTip": "C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\views.py",
-              "RelativeToolTip": "grow_project\\students_app\\views.py",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAgwDYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-05-25T07:53:47.657Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "utils.py",
-              "DocumentMoniker": "C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\utils.py",
-              "RelativeDocumentMoniker": "grow_project\\students_app\\utils.py",
-              "ToolTip": "C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\utils.py",
-              "RelativeToolTip": "grow_project\\students_app\\utils.py",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-05-27T11:07:42.91Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "select_subject.html",
               "DocumentMoniker": "C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\templates\\students_app\\select_subject.html",
               "RelativeDocumentMoniker": "grow_project\\students_app\\templates\\students_app\\select_subject.html",
               "ToolTip": "C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\templates\\students_app\\select_subject.html",
               "RelativeToolTip": "grow_project\\students_app\\templates\\students_app\\select_subject.html",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAE0AAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAADoAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-05-27T07:43:55.789Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "students.csv",
-              "DocumentMoniker": "C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students.csv",
-              "RelativeDocumentMoniker": "grow_project\\students.csv",
-              "ToolTip": "C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students.csv",
-              "RelativeToolTip": "grow_project\\students.csv",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
-              "WhenOpened": "2025-05-28T06:52:04.37Z",
+              "DocumentIndex": 0,
+              "Title": "views.py",
+              "DocumentMoniker": "C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\views.py",
+              "RelativeDocumentMoniker": "grow_project\\students_app\\views.py",
+              "ToolTip": "C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\views.py",
+              "RelativeToolTip": "grow_project\\students_app\\views.py",
+              "ViewState": "AgIAABIAAAAAAAAAAAAgwCwAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-05-25T07:53:47.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "utils.py",
+              "DocumentMoniker": "C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\utils.py",
+              "RelativeDocumentMoniker": "grow_project\\students_app\\utils.py",
+              "ToolTip": "C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\utils.py",
+              "RelativeToolTip": "grow_project\\students_app\\utils.py",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAEoAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-05-27T11:07:42.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "avatar_form.html",
+              "DocumentMoniker": "C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\templates\\students_app\\avatar_form.html",
+              "RelativeDocumentMoniker": "grow_project\\students_app\\templates\\students_app\\avatar_form.html",
+              "ToolTip": "C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\templates\\students_app\\avatar_form.html",
+              "RelativeToolTip": "grow_project\\students_app\\templates\\students_app\\avatar_form.html",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAKIAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-05-27T14:50:17.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "urls.py",
+              "DocumentMoniker": "C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\urls.py",
+              "RelativeDocumentMoniker": "grow_project\\students_app\\urls.py",
+              "ToolTip": "C:\\Users\\kimsd\\Documents\\grow\\django\\grow_project\\students_app\\urls.py",
+              "RelativeToolTip": "grow_project\\students_app\\urls.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-05-27T07:57:25.651Z",
               "EditorCaption": ""
             }
           ]

@@ -44,9 +44,9 @@
             transition: transform 0.2s ease;
         }
 
-            .subject-card:hover {
-                transform: scale(1.05);
-            }
+        .subject-card:hover {
+            transform: scale(1.05);
+        }
 
         .math {
             background-color: #F9B74E;
@@ -71,15 +71,15 @@
     <h1>나의 키우기</h1>
 
     <div class="subject-grid">
-        <a href="{% url 'show_avatar' student_id=student_id subject='math' %}" class="subject-card math">
+        <a href="{% url 'show_avatar' subject='math' %}" class="subject-card math">
             수학
             <div class="subject-subtitle">제빵사</div>
         </a>
-        <a href="{% url 'show_avatar' student_id=student_id subject='social' %}" class="subject-card social">
+        <a href="{% url 'show_avatar' subject='social' %}" class="subject-card social">
             사회
             <div class="subject-subtitle">민주시민</div>
         </a>
-        <a href="{% url 'show_avatar' student_id=student_id subject='science' %}" class="subject-card science">
+        <a href="{% url 'show_avatar' subject='science' %}" class="subject-card science">
             과학
             <div class="subject-subtitle">명탐정</div>
         </a>

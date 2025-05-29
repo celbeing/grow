@@ -1,6 +1,6 @@
 ﻿from django.shortcuts import render, redirect
 from django.http import JsonResponse, HttpResponse
-from .utils import load_students_from_csv, render_avatar_text, validate_student_code_by_name, get_science_avatar_image
+from .utils import load_students_from_csv, render_avatar_text, get_math_avatar_image, get_social_avatar_image, get_science_avatar_image
 
 # 학생 정보를 CSV 파일에서 불러오는 함수
 # urls.py에서 이 함수들을 호출하여 AJAX 요청을 처리합니다.
@@ -30,15 +30,23 @@ def get_names(request):
     names = df[(df["school"] == school) & (df["grade"] == int(grade))]["name"].tolist()
     return JsonResponse({"names": names})
 
-def select_subject(request, student_id):
+def select_subject(request):
     # 코드 인증 성공 후 이 페이지로 redirect
-    return render(request, 'students_app/select_subject.html',{
+    student_id = request.session.get('authenticated_student_id')
+    
+    # 세션 정보 일치하지 않는 경우
+    if not student_id:
+        return redirect('avatar_view')
+
+    return render(request, 'students_app/select_subject.html', {
         'student_id': student_id
     })
 
-def show_avatar(request, student_id, subject):
-    # 선택된 과목을 기반으로 아바타 출력
-    # 이 부분은 나중에 이미지로 대체할 예정
+def show_avatar(request, subject):
+    student_id = request.session.get('authenticated_student_id')
+    if not student_id:
+        return redirect('avatar_view')
+    
     df = load_students_from_csv()
     student_row = df[df["id"] == student_id]
 
@@ -47,16 +55,29 @@ def show_avatar(request, student_id, subject):
 
     student_data = student_row.iloc[0].to_dict()
 
-    if subject == "science":
+    if subject == "math":
+        avatar_path = get_math_avatar_image(student_data)
+        return render(request, "students_app/math.html", {
+            "student": student_data,
+            "avatar_path": avatar_path
+        })
+    elif subject == "social":
+        avatar_path = get_social_avatar_image(student_data)
+        return render(request, "students_app/social.html", {
+            "student": student_data,
+            "avatar_path": avatar_path
+        })
+    elif subject == "science":
         avatar_path = get_science_avatar_image(student_data)
+        return render(request, "students_app/science.html", {
+            "student": student_data,
+            "avatar_path": avatar_path
+        })
     else:
         avatar_path = None  # 다른 과목 미구현 시 기본 처리
+        return HttpResponse("잘못된 과목입니다.")
 
-    return render(request, "students_app/science.html", {
-        "student": student_data,
-        "avatar_path": avatar_path
-    })
-
+    
 
 def avatar_view(request):
     df = load_students_from_csv()
@@ -81,7 +102,8 @@ def avatar_view(request):
 
             if not filtered.empty:
                 student_id = int(filtered.iloc[0]["id"])
-                return redirect("select_subject", student_id=student_id)
+                request.session['authenticated_student_id'] = student_id  # 세션에 저장
+                return redirect("select_subject")
             else:
                 error = "유효하지 않은 코드입니다."
         except:

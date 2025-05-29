@@ -17,6 +17,44 @@ def validate_student_code_by_name(df, name: str, code: str):
         return None, "코드가 일치하지 않습니다."
     return student.to_dict(), None
 
+# 수학 아바타 이미지
+def get_math_avatar_image(student_data):
+    score_keys = [
+        "math_problem_solving", "math_reasoning", "math_communication",
+        "math_info_processing", "math_creative", "math_attitude"
+    ]
+    total = sum([int(student_data.get(key, 0)) for key in score_keys])
+
+    if total <= 30:
+        level = "lv1"
+    elif total <= 60:
+        level = "lv2"
+    elif total <= 80:
+        level = "lv3"
+    else:
+        level = "lvmax"
+
+    return f"students_app/images/math_{level}.png"
+
+# 사회 아바타 이미지
+def get_social_avatar_image(student_data):
+    score_keys = [
+        "social_citizenship", "social_decision", "social_communication",
+        "social_info", "social_critical"
+    ]
+    total = sum([int(student_data.get(key, 0)) for key in score_keys])
+
+    if total <= 30:
+        level = "lv1"
+    elif total <= 60:
+        level = "lv2"
+    elif total <= 80:
+        level = "lv3"
+    else:
+        level = "lvmax"
+
+    return f"students_app/images/social_{level}.png"
+
 # 과학 아바타 이미지
 def get_science_avatar_image(student_data):
     score_keys = [

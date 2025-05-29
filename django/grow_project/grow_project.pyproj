@@ -48,10 +48,18 @@
   <ItemGroup>
     <Content Include="students.csv" />
     <Content Include="requirements.txt" />
+    <Content Include="students_app\static\students_app\images\math_lv1.png" />
+    <Content Include="students_app\static\students_app\images\math_lv2.png" />
+    <Content Include="students_app\static\students_app\images\math_lv3.png" />
+    <Content Include="students_app\static\students_app\images\math_lvmax.png" />
     <Content Include="students_app\static\students_app\images\science_lv1.png" />
     <Content Include="students_app\static\students_app\images\science_lv2.png" />
     <Content Include="students_app\static\students_app\images\science_lv3.png" />
     <Content Include="students_app\static\students_app\images\science_lvmax.png" />
+    <Content Include="students_app\static\students_app\images\social_lv1.png" />
+    <Content Include="students_app\static\students_app\images\social_lv2.png" />
+    <Content Include="students_app\static\students_app\images\social_lv3.png" />
+    <Content Include="students_app\static\students_app\images\social_lvmax.png" />
     <Content Include="students_app\templates\students_app\avatar_form.html" />
     <Content Include="students_app\templates\students_app\index.html" />
     <Content Include="students_app\templates\students_app\math.html" />
