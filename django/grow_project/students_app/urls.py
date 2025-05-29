@@ -10,4 +10,5 @@ urlpatterns = [
     path('ajax/get_schools/', views.get_schools, name='get_schools'),
     path('ajax/get_grades/', views.get_grades, name='get_grades'),
     path('ajax/get_names/', views.get_names, name='get_names'),
+    path('ajax/update_score/', views.update_score, name='update_score'),
 ]

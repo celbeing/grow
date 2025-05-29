@@ -1,6 +1,34 @@
-﻿from django.shortcuts import render, redirect
+﻿from django.views.decorators.csrf import csrf_exempt
+from django.shortcuts import render, redirect
 from django.http import JsonResponse, HttpResponse
+from django.conf import settings
 from .utils import load_students_from_csv, render_avatar_text, get_math_avatar_image, get_social_avatar_image, get_science_avatar_image
+import pandas as pd
+import os
+
+@csrf_exempt
+def update_score(request):
+    if request.method == "POST":
+        student_id = int(request.POST.get("student_id"))
+        key = request.POST.get("key")
+        delta = int(request.POST.get("delta"))
+
+        # CSV 경로 지정
+        csv_path = os.path.join(settings.BASE_DIR, 'students.csv')
+        df = pd.read_csv(csv_path)
+
+        # 점수 수정
+        idx = df.index[df["id"] == student_id].tolist()
+        if not idx:
+            return JsonResponse({"error": "학생을 찾을 수 없습니다."}, status=404)
+
+        i = idx[0]
+        old_score = int(df.at[i, key])
+        new_score = max(0, min(50, old_score + delta))  # 0~50 제한
+        df.at[i, key] = new_score
+        df.to_csv(csv_path, index=False)
+
+        return JsonResponse({"new_score": new_score})
 
 # 학생 정보를 CSV 파일에서 불러오는 함수
 # urls.py에서 이 함수들을 호출하여 AJAX 요청을 처리합니다.
@@ -57,9 +85,18 @@ def show_avatar(request, subject):
 
     if subject == "math":
         avatar_path = get_math_avatar_image(student_data)
+        math_skills = {
+            "math_problem_solving": "문제해결능력",
+            "math_reasoning": "추론능력",
+            "math_communication": "의사소통능력",
+            "math_info_processing": "정보처리능력",
+            "math_creative": "창의융합능력",
+            "math_attitude": "태도 및 실천능력"
+        }
         return render(request, "students_app/math.html", {
             "student": student_data,
-            "avatar_path": avatar_path
+            "avatar_path": avatar_path,
+            "math_skills": math_skills
         })
     elif subject == "social":
         avatar_path = get_social_avatar_image(student_data)

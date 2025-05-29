@@ -39,6 +39,8 @@
     <Compile Include="students_app\apps.py" />
     <Compile Include="students_app\migrations\__init__.py" />
     <Compile Include="students_app\models.py" />
+    <Compile Include="students_app\templatetags\custom_filters.py" />
+    <Compile Include="students_app\templatetags\__init__.py" />
     <Compile Include="students_app\tests.py" />
     <Compile Include="students_app\urls.py" />
     <Compile Include="students_app\utils.py" />
@@ -72,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="grow_project\" />
+    <Folder Include="students_app\templatetags\" />
     <Folder Include="students_app\static\" />
     <Folder Include="students_app\" />
     <Folder Include="students_app\migrations\" />
