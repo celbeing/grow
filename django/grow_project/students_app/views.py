@@ -2,7 +2,7 @@
 from django.shortcuts import render, redirect
 from django.http import JsonResponse, HttpResponse
 from django.conf import settings
-from .utils import load_students_from_csv, render_avatar_text, get_math_avatar_image, get_social_avatar_image, get_science_avatar_image
+from .utils import load_students_from_csv, get_math_avatar_image, get_social_avatar_image, get_science_avatar_image
 import pandas as pd
 import os
 
@@ -24,7 +24,7 @@ def update_score(request):
 
         i = idx[0]
         old_score = int(df.at[i, key])
-        new_score = max(0, min(50, old_score + delta))  # 0~50 제한
+        new_score = max(0, min(10, old_score + delta))  # 0~25 제한
         df.at[i, key] = new_score
         df.to_csv(csv_path, index=False)
 
@@ -100,15 +100,31 @@ def show_avatar(request, subject):
         })
     elif subject == "social":
         avatar_path = get_social_avatar_image(student_data)
+        social_skills = {
+            "social_citizenship": "시민의식",
+            "social_decision": "문제해결 및 의사결정력",
+            "social_communication": "의사소통능력",
+            "social_info":"정보처리활용능력",
+            "social_critical": "비판적 사고력"}
+
         return render(request, "students_app/social.html", {
             "student": student_data,
-            "avatar_path": avatar_path
+            "avatar_path": avatar_path,
+            "social_skills": social_skills
         })
     elif subject == "science":
         avatar_path = get_science_avatar_image(student_data)
+        science_skills = {
+            "science_logical": "과학적사고력",
+            "science_inquiry": "탐구능력",
+            "science_problem_solving": "문제해결력",
+            "science_communication": "의사소통능력",
+            "science_lifelong": "평생학습능력"
+        }
         return render(request, "students_app/science.html", {
             "student": student_data,
-            "avatar_path": avatar_path
+            "avatar_path": avatar_path,
+            "science_skills": science_skills
         })
     else:
         avatar_path = None  # 다른 과목 미구현 시 기본 처리
@@ -150,31 +166,6 @@ def avatar_view(request):
         "regions": regions,
         "error": error
     })
-
-'''
-def verify_with_dropdown(request):
-    df = load_students_from_csv()
-    names = df['name'].tolist()
-    selected_name = ""
-    result = ""
-    error = ""
-
-    if request.method == 'POST':
-        selected_name = request.POST.get('student_name')
-        code_input = request.POST.get('code')
-
-        student_data, error = validate_student_code_by_name(df, selected_name, code_input)
-
-        if not error:
-            result = "인증 성공! (예: 아바타 페이지 이동)"
-
-    return render(request, 'students_app/verify_dropdown.html', {
-        'student_names': names,
-        'selected_name': selected_name,
-        'result': result,
-        'error': error
-    })
-'''
 
 def student_list(request):
     df = load_students_from_csv()

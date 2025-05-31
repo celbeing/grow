@@ -18,22 +18,32 @@
             margin-bottom: 20px;
         }
 
-        pre {
-            background-color: #fde3b2;
-            padding: 20px;
-            border-radius: 10px;
-            display: inline-block;
-            text-align: left;
-            font-size: 16px;
-            border: 1px solid #ccc;
-        }
-
         .container {
             width: 300px;
             height: 300px;
             transition: all 0.1s;
             display: block;
             margin: 0 auto;
+            border-radius: 18px;
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .total-score {
+            width: 120px;
+            height: 40px;
+            border-radius: 12px;
+            text-align: center;
+            color: darkorange;
+            font-weight: bold;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
         }
 
         .skill-row {
@@ -44,19 +54,19 @@
         }
 
         .skill-label {
-            width: 160px;
+            width: 140px;
             text-align: right;
-            margin-right: 10px;
             font-size: 15px;
         }
 
         .skill-bar-container {
-            width: 250px;
+            width: 300px;
             height: 20px;
             background-color: #eee;
             border-radius: 5px;
             overflow: hidden;
-            margin-right: 10px;
+            margin: 0 10px;
+            position: relative;
         }
 
         .skill-bar {
@@ -65,23 +75,45 @@
             width: 0%;
             transition: width 0.2s;
         }
+
+        .score-text {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 100%;
+            line-height: 20px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .blank-container {
+            width: 81.6px;
+            height: 20px;
+        }
     </style>
 </head>
 <body>
     <h1>{{ student.name }}의 제빵사</h1>
     <div class="container">
-        <img id="avatar-img" src="{% static avatar_path %}" alt="Math Avatar" style="max-width: 300px; margin-top: 20px;">
+        <img id="avatar-img" src="{% static avatar_path %}" alt="Math Avatar" style="max-width: 300px;">
     </div>
     <br>
+    <div class="total-score">
+        <h3>총합: <span id="total-score">0</span>점</h3>
+    </div>
     <div id="skills">
         {% for skill_key, skill_label in math_skills.items %}
         <div class="skill-row">
             <span class="skill-label">{{ skill_label }}</span>
             <div class="skill-bar-container">
                 <div class="skill-bar" id="bar-{{ skill_key }}"></div>
+                <span class="score-text" id="score-{{ skill_key }}"></span>
             </div>
             <button onclick="updateScore('{{ skill_key }}', 1)">▲</button>
             <button onclick="updateScore('{{ skill_key }}', -1)">▼</button>
+            <div class="blank-container">
+            </div>
         </div>
         {% endfor %}
     </div>
@@ -100,7 +132,7 @@
         });
 
         const studentId = {{ student.id }};
-        const maxScore = 50;
+        const maxScore = 10;
 
         const scores = {
             {% for skill_key in math_skills.keys %}
@@ -111,6 +143,7 @@
         function updateBar(skill) {
             const percent = (scores[skill] / maxScore) * 100;
             document.getElementById("bar-" + skill).style.width = percent + "%";
+            document.getElementById("score-" + skill).innerText = scores[skill];
         }
 
         function updateScore(skill, delta) {
@@ -127,15 +160,22 @@
                 if (data.new_score !== undefined) {
                     scores[skill] = data.new_score;
                     updateBar(skill);
+                    updateTotalScore(); // 총합 갱신
+                    updateAvatarImage(); // 이미지 갱신
                 }
             });
         }
 
+        function updateTotalScore() {
+            const total = Object.values(scores).reduce((a, b) => a + b, 0);
+            document.getElementById("total-score").innerText = total;
+        }
+
         function getAvatarImagePath(total) {
-            if (total <= 30) return "{% static 'images/math/avatar_math_lv1.png' %}";
-            else if (total <= 60) return "{% static 'images/math/avatar_math_lv2.png' %}";
-            else if (total <= 80) return "{% static 'images/math/avatar_math_lv3.png' %}";
-            else return "{% static 'images/math/avatar_math_lvmax.png' %}";
+            if (total <= 7) return "{% static 'students_app/images/math_lv1.png' %}";
+            else if (total <= 14) return "{% static 'students_app/images/math_lv2.png' %}";
+            else if (total <= 21) return "{% static 'students_app/images/math_lv3.png' %}";
+            else return "{% static 'students_app/images/math_lvmax.png' %}";
         }
 
         function updateAvatarImage() {
@@ -147,25 +187,8 @@
 
         window.onload = function () {
             Object.keys(scores).forEach(updateBar);
+            updateTotalScore(); // 초기 총합 표시
         };
-
-        fetch("/ajax/update_score/", {
-            method: "POST",
-            headers: {
-                "X-CSRFToken": "{{ csrf_token }}",
-                "Content-Type": "application/x-www-form-urlencoded"
-            },
-            body: `student_id=${studentId}&key=${skill}&delta=${delta}`
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.new_score !== undefined) {
-                    scores[skill] = data.new_score;
-                    updateBar(skill);
-                    updateAvatarImage();
-                }
-            });
-
     </script>
 </body>
 </html>
